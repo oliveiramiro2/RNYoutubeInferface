@@ -1,21 +1,32 @@
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState, useEffect } from "react";
+import { Dimensions } from "react-native";
+import AnimatedSplash from "react-native-animated-splash-screen";
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#ffffff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
+import Home from "./src/Pages/Home";
 
-const App: React.FC = () => (
-    <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style="auto" />
-    </View>
-);
+const { width } = Dimensions.get("window");
+
+const App: React.FC = () => {
+    const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoaded(true);
+        }, 8800);
+    }, []);
+
+    return (
+        <AnimatedSplash
+            translucent
+            isLoaded={isLoaded}
+            logoImage={require("./assets/splashAnimated.gif")}
+            backgroundColor="#ffffff"
+            logoHeight={width}
+            logoWidth={width}
+        >
+            <Home />
+        </AnimatedSplash>
+    );
+};
 
 export default App;
