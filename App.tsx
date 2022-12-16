@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Dimensions } from "react-native";
 import AnimatedSplash from "react-native-animated-splash-screen";
+import { NavigationContainer } from "@react-navigation/native";
 
-import Home from "./src/Pages/Home";
+import Routes from "./src/Routes";
 
 const { width } = Dimensions.get("window");
 
@@ -16,16 +17,18 @@ const App: React.FC = () => {
     }, []);
 
     return (
-        <AnimatedSplash
-            translucent
-            isLoaded={isLoaded}
-            logoImage={require("./assets/splashAnimated.gif")}
-            backgroundColor="#ffffff"
-            logoHeight={width}
-            logoWidth={width}
-        >
-            <Home />
-        </AnimatedSplash>
+        <NavigationContainer>
+            <AnimatedSplash
+                translucent
+                isLoaded={isLoaded}
+                logoImage={require("./assets/splashAnimated.gif")}
+                backgroundColor="#ffffff"
+                logoHeight={width}
+                logoWidth={width}
+            >
+                <Routes />
+            </AnimatedSplash>
+        </NavigationContainer>
     );
 };
 

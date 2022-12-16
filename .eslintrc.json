@@ -39,6 +39,8 @@
             }
         ],
         "import/no-unresolved": ["off", { "commonjs": false }],
-        "global-require": 0
+        "global-require": 0,
+        "react/no-unstable-nested-components": ["off", { "allowAsProps": false }],
+        "consistent-return": 0
     }
 }
