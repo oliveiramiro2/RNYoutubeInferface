@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dimensions } from "react-native";
 import AnimatedSplash from "react-native-animated-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
 
 import Routes from "./src/Routes";
 
@@ -13,7 +14,7 @@ const App: React.FC = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoaded(true);
-        }, 500);
+        }, 8800);
     }, []);
 
     return (
@@ -26,7 +27,10 @@ const App: React.FC = () => {
                 logoHeight={width}
                 logoWidth={width}
             >
-                <Routes />
+                <>
+                    <Routes />
+                    <StatusBar style="light" />
+                </>
             </AnimatedSplash>
         </NavigationContainer>
     );

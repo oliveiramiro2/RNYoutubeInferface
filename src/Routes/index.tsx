@@ -41,7 +41,7 @@ const Routes = () => (
                                         ? "home"
                                         : "home-outline"
                                 }
-                                size={size + 3}
+                                size={size}
                                 color={color}
                             />
                             <Text style={{ color }}>Início</Text>

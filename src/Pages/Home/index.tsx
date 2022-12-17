@@ -1,13 +1,15 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
 
 import styles from "./styles";
+import Header from "../Components/Header";
 
 const Home: React.FC = () => (
     <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style="auto" />
+        <Header />
+        <Text style={{ color: "#fff" }}>
+            Open up App.tsx to start working on your app!
+        </Text>
     </View>
 );
 
