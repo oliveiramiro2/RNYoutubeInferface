@@ -1,13 +1,22 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 
 import Home from "../Pages/Home";
 import Shorts from "../Pages/Shorts";
 import ModalNewPost from "../Pages/ModalNewPost";
 import Subscripber from "../Pages/Subscriber";
 import Library from "../Pages/Library";
+
+import styles from "./styles";
+
+const IconShorts = require("../Assets/imgs/youtube-shorts.png");
+const IconShortsOutline = require("../Assets/imgs/youtube-shorts-outline.png");
+const IconSubscription = require("../Assets/imgs/subscrition.png");
+const IconSubscriptionOutline = require("../Assets/imgs/subscrition-outline.png");
+const IconLibrary = require("../Assets/imgs/youtube-library.png");
+const IconLibraryOutline = require("../Assets/imgs/youtube-library-outline.png");
 
 export type StackParams = {
     Home: object | undefined;
@@ -25,7 +34,7 @@ const Routes = () => (
             tabBarIcon: ({ color, size }) => {
                 if (route.name === "Home") {
                     return (
-                        <View>
+                        <View style={[styles.contain]}>
                             <Ionicons
                                 name={
                                     navigation.isFocused()
@@ -41,15 +50,14 @@ const Routes = () => (
                 }
                 if (route.name === "Shorts") {
                     return (
-                        <View>
-                            <Ionicons
-                                name={
+                        <View style={[styles.contain]}>
+                            <Image
+                                source={
                                     navigation.isFocused()
-                                        ? "home"
-                                        : "home-outline"
+                                        ? IconShorts
+                                        : IconShortsOutline
                                 }
-                                size={size + 3}
-                                color={color}
+                                resizeMode="cover"
                             />
                             <Text style={{ color }}>Shorts</Text>
                         </View>
@@ -68,34 +76,32 @@ const Routes = () => (
                 }
                 if (route.name === "Subscripber") {
                     return (
-                        <View>
-                            <Ionicons
-                                name={
+                        <View style={[styles.contain]}>
+                            <Image
+                                source={
                                     navigation.isFocused()
-                                        ? "home"
-                                        : "home-outline"
+                                        ? IconSubscription
+                                        : IconSubscriptionOutline
                                 }
-                                size={size + 3}
-                                color={color}
+                                resizeMode="cover"
                             />
-                            <Text style={{ color }}>Shorts</Text>
+                            <Text style={{ color }}>Inscrições</Text>
                         </View>
                     );
                 }
 
                 if (route.name === "Library") {
                     return (
-                        <View>
-                            <Ionicons
-                                name={
+                        <View style={[styles.contain]}>
+                            <Image
+                                source={
                                     navigation.isFocused()
-                                        ? "home"
-                                        : "home-outline"
+                                        ? IconLibrary
+                                        : IconLibraryOutline
                                 }
-                                size={size + 3}
-                                color={color}
+                                resizeMode="cover"
                             />
-                            <Text style={{ color }}>Shorts</Text>
+                            <Text style={{ color }}>Biblioteca</Text>
                         </View>
                     );
                 }
