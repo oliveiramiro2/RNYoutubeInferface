@@ -10,8 +10,8 @@ const Videos: React.FC = () => (
         <ImageBackground
             source={{
                 uri: `https://api.lorem.space/image/movie?w=${Math.round(
-                    Math.random() * 2600
-                )}&h=${Math.round(Math.random() * 2600)}`,
+                    Math.random() * 1960
+                )+40}&h=${Math.round(Math.random() * 1960)+40}`,
             }}
             resizeMode="center"
             style={[styles.containVideo]}
@@ -31,7 +31,7 @@ const Videos: React.FC = () => (
                 source={{
                     uri: `https://api.lorem.space/image/face?w=${Math.round(
                         Math.random() * 1200
-                    )}&h=${Math.round(Math.random() * 1200)}`,
+                    )+40}&h=${Math.round(Math.random() * 1200)+40}`,
                 }}
                 style={[styles.containImgAvatar]}
             />

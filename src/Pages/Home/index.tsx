@@ -60,7 +60,8 @@ const Home: React.FC = () => {
             <FlatList
                 data={videoData}
                 keyExtractor={item => item.id.toString()}
-                renderItem={() => <Videos />}
+                renderItem={Videos}
+                disableVirtualization
             />
         </View>
     );
