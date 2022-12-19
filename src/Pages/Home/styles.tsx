@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
         borderBottomColor: "#302f2f",
         borderBottomWidth: 1,
         maxHeight: 53,
+        minHeight: 53,
     },
 
     containUnderHeaderCompass: {

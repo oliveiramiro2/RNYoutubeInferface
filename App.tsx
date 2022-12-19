@@ -3,6 +3,7 @@ import { Dimensions } from "react-native";
 import AnimatedSplash from "react-native-animated-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+import { NativeBaseProvider } from "native-base";
 
 import Routes from "./src/Routes";
 
@@ -14,24 +15,26 @@ const App: React.FC = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoaded(true);
-        }, 800);
+        }, 8800);
     }, []);
 
     return (
         <NavigationContainer>
-            <AnimatedSplash
-                translucent
-                isLoaded={isLoaded}
-                logoImage={require("./assets/splashAnimated.gif")}
-                backgroundColor="#ffffff"
-                logoHeight={width}
-                logoWidth={width}
-            >
-                <>
-                    <Routes />
-                    <StatusBar style="light" />
-                </>
-            </AnimatedSplash>
+            <NativeBaseProvider>
+                <AnimatedSplash
+                    translucent
+                    isLoaded={isLoaded}
+                    logoImage={require("./assets/splashAnimated.gif")}
+                    backgroundColor="#ffffff"
+                    logoHeight={width}
+                    logoWidth={width}
+                >
+                    <>
+                        <Routes />
+                        <StatusBar style="light" />
+                    </>
+                </AnimatedSplash>
+            </NativeBaseProvider>
         </NavigationContainer>
     );
 };

@@ -1,15 +1,28 @@
 import React, { useState } from "react";
-import { Text, View, ScrollView, TouchableOpacity } from "react-native";
+import {
+    Text,
+    View,
+    ScrollView,
+    TouchableOpacity,
+    FlatList,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import styles from "./styles";
 import Header from "../Components/Header";
+import Videos from "./components/Videos";
 
-import { underHeaderText, IUnderHeader } from "../../Utils";
+import {
+    underHeaderText,
+    videoDataStatic,
+    IUnderHeader,
+    IVideoData,
+} from "../../Utils";
 
 const Home: React.FC = () => {
     const [dataUnderHeader] = useState<IUnderHeader[]>(underHeaderText);
     const [underHeaderSelected, setUnderHeaderSelected] = useState<number>(0);
+    const [videoData] = useState<IVideoData[]>(videoDataStatic);
 
     return (
         <View style={styles.container}>
@@ -44,6 +57,11 @@ const Home: React.FC = () => {
                     </TouchableOpacity>
                 ))}
             </ScrollView>
+            <FlatList
+                data={videoData}
+                keyExtractor={item => item.id.toString()}
+                renderItem={() => <Videos />}
+            />
         </View>
     );
 };
