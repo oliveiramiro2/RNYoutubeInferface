@@ -14,7 +14,7 @@ const App: React.FC = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoaded(true);
-        }, 8800);
+        }, 800);
     }, []);
 
     return (
