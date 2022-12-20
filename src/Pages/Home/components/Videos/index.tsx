@@ -13,7 +13,7 @@ const Videos: React.FC = () => (
                     Math.random() * 1960
                 )+40}&h=${Math.round(Math.random() * 1960)+40}`,
             }}
-            resizeMode="center"
+            resizeMode="cover"
             style={[styles.containVideo]}
         >
             <View style={[styles.containTime]}>
