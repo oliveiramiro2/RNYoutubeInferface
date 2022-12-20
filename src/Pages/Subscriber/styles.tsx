@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
     textShowALL: {
         fontWeight: "bold",
-        color: "#0066ff",
+        color: "#2e75e0",
     },
 
     containUnderHeader: {
