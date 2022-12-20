@@ -10,7 +10,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import styles from "./styles";
 import Header from "../Components/Header";
-import Videos from "./components/Videos";
+import Videos from "../Components/Videos";
 
 import {
     underHeaderText,
