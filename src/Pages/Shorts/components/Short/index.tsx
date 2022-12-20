@@ -34,7 +34,6 @@ const Short: React.FC = () => {
                 resizeMode="cover"
                 style={[styles.containShort]}
             >
-                <Text>Shorts</Text>
                 <View style={[styles.containShortInfo]}>
                     <Text style={[styles.textTitleShort]} numberOfLines={2}>
                         Short Title Short Title Short Title Short Title Short

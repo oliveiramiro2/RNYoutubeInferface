@@ -1,11 +1,11 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const { width } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
     contain: {
         flex: 1,
-        backgroundColor: "#000",
+        height: height - 10,
     },
 
     containShort: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "#fff",
         fontSize: 15,
-        marginHorizontal: 10,
+        marginLeft: 10,
     },
 
     imgSubs: {
