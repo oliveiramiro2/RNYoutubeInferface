@@ -49,6 +49,7 @@ const Library: React.FC = () => {
                         data={viwedVideo}
                         keyExtractor={item => item.id.toString()}
                         horizontal
+                        disableVirtualization
                         renderItem={() => <Video />}
                     />
                 </View>
