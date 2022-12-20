@@ -36,8 +36,8 @@ const Short: React.FC = () => {
             >
                 <View style={[styles.containShortInfo]}>
                     <Text style={[styles.textTitleShort]} numberOfLines={2}>
-                        Short Title Short Title Short Title Short Title Short
-                        Title Short Title Short Title Short Title fdsfdsfsd
+                        Short Lorem ipsum dolor sit amet. #Lorem_Ipsum
+                        #Text_Generator
                     </Text>
                     <View style={[styles.containChanelAndSubs]}>
                         <Avatar

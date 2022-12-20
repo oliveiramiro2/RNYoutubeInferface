@@ -9,9 +9,9 @@ const Videos: React.FC = () => (
     <View>
         <ImageBackground
             source={{
-                uri: `https://api.lorem.space/image/movie?w=${Math.round(
-                    Math.random() * 1960
-                )+40}&h=${Math.round(Math.random() * 1960)+40}`,
+                uri: `https://api.lorem.space/image/movie?w=${
+                    Math.round(Math.random() * 1960) + 40
+                }&h=${Math.round(Math.random() * 1960) + 40}`,
             }}
             resizeMode="cover"
             style={[styles.containVideo]}
@@ -29,9 +29,9 @@ const Videos: React.FC = () => (
             <Avatar
                 bg="light.300"
                 source={{
-                    uri: `https://api.lorem.space/image/face?w=${Math.round(
-                        Math.random() * 1200
-                    )+40}&h=${Math.round(Math.random() * 1200)+40}`,
+                    uri: `https://api.lorem.space/image/face?w=${
+                        Math.round(Math.random() * 1200) + 40
+                    }&h=${Math.round(Math.random() * 1200) + 40}`,
                 }}
                 style={[styles.containImgAvatar]}
             />
@@ -41,7 +41,11 @@ const Videos: React.FC = () => (
                         style={[styles.textWhite, styles.textTitleVideo]}
                         numberOfLines={2}
                     >
-                        Titulo vídeoTitulo vídeoTituloaaasdq
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris maximus sit amet lorem at pretium. Integer id
+                        odio aliquet, hendrerit lacus id, laoreet justo.
+                        Praesent sem libero, auctor ac ullamcorper quis,
+                        bibendum id ipsum.
                     </Text>
                     <MaterialCommunityIcons
                         name="dots-vertical"
@@ -52,7 +56,7 @@ const Videos: React.FC = () => (
                 </View>
                 <View style={[styles.containChanelInfo]}>
                     <Text style={[styles.textChanelInfo]} numberOfLines={2}>
-                        Nome canal fdsfdsfsdfsdfdsfsdaa •{" "}
+                        Canal Lorem Ipsum •{" "}
                         {Math.round(Math.random() * 100)} mil visualizações • há{" "}
                         {Math.round(Math.random() * 10) + 1} meses
                     </Text>
